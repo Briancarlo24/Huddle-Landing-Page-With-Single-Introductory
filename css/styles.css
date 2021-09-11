@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  width: 100vw;
+  min-width: 250px;
+}
+
+body main {
+  background-color: #674baf;
+  background-image: url("../images/bg-mobile.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 35px;
+}
+
+body main .img-container .logo {
+  width: 45%;
+  -webkit-transform: translate(-3%, -10%);
+          transform: translate(-3%, -10%);
+  margin-bottom: 50px;
+}
+
+body main .img-container .hero {
+  width: 100%;
+}
+
+body main article {
+  text-align: center;
+  padding: 50px 0px 0px;
+}
+
+body main article h1 {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 15px;
+}
+
+body main article p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+body main article button {
+  font-family: "Poppins", sans-serif;
+  height: 45px;
+  width: 70%;
+  -webkit-box-shadow: 1px 6px 6px -4px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 6px 6px -4px rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  color: #674baf;
+  cursor: pointer;
+  text-shadow: 0px 1px 10px #969696;
+}
+
+body main article button:hover {
+  background-color: #e882e8;
+  color: white;
+}
+
+body main .icon-container {
+  padding: 25px 25% 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .icon-container .fab {
+  border: 1px solid white;
+  border-radius: 100px;
+  color: white;
+  cursor: pointer;
+  margin: 50px 5%;
+}
+
+body main .icon-container .fab:hover {
+  color: #e882e8;
+  border-color: #e882e8;
+}
+
+body main .icon-container .fa-facebook-f {
+  padding: 10px 12.5px;
+}
+
+body main .icon-container .fa-twitter {
+  padding: 10px;
+}
+
+body main .icon-container .fa-instagram {
+  padding: 10px;
+}
+
+footer {
+  padding: 50px 30px;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 375px) {
+  body main {
+    padding: 50px;
+  }
+  body main article h1 {
+    font-size: calc(36px + 2vw);
+  }
+  body main article p {
+    padding: 15px;
+    font-size: 1.1em;
+  }
+  body main article button {
+    height: 55px;
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    display: inline-block;
+    height: 100%;
+    width: 100vw;
+  }
+  body main {
+    background-image: url("../images/bg-desktop.svg");
+    background-position: -80px center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    padding: 60px;
+  }
+  body main .img-container {
+    padding: 0px 50px 60px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-flex: 1.1;
+        -ms-flex-positive: 1.1;
+            flex-grow: 1.1;
+    -ms-flex-negative: 0.2;
+        flex-shrink: 0.2;
+  }
+  body main .img-container .logo {
+    width: 200px;
+    margin-bottom: 100px;
+  }
+  body main article {
+    -webkit-box-flex: 0.9;
+        -ms-flex-positive: 0.9;
+            flex-grow: 0.9;
+    -ms-flex-negative: 6;
+        flex-shrink: 6;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: left;
+  }
+  body main article h1 {
+    font-size: calc(16px + 1.5vw);
+  }
+  body main article p {
+    font-size: 20px;
+    padding: 0 30px 0 0;
+  }
+  body main article button {
+    width: 180px;
+    height: 55px;
+    font-size: 1.1em;
+  }
+  body main article .icon-container {
+    position: absolute;
+    padding: 0;
+    height: 50px;
+    bottom: 0;
+    right: 35px;
+  }
+  .icon-container {
+    position: relative;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

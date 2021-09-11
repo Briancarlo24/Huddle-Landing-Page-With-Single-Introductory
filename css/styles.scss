@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+html {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+// font-family: "Poppins", sans-serif;
+// font-family: "Open Sans", sans-serif;
+
+// ---------------COLORS---------------
+$violet: hsl(257, 40%, 49%);
+$magenta: hsl(300, 69%, 71%);
+
+body {
+  height: 100%;
+  width: 100vw;
+  min-width: 250px;
+
+  main {
+    background-color: $violet;
+    background-image: url("../images/bg-mobile.svg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 35px;
+    .img-container {
+      .logo {
+        width: 45%;
+        transform: translate(-3%, -10%);
+        margin-bottom: 50px;
+      }
+      .hero {
+        width: 100%;
+      }
+    }
+    //DESCRIPTIONS SECTIONS
+    article {
+      text-align: center;
+      padding: 50px 0px 0px;
+
+      h1 {
+        color: white;
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 15px;
+      }
+
+      p {
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 30px;
+        line-height: 1.6;
+      }
+
+      button {
+        font-family: "Poppins", sans-serif;
+        height: 45px;
+        width: 70%;
+
+        box-shadow: 1px 6px 6px -4px rgba(0, 0, 0, 0.5);
+        border: none;
+        border-radius: 50px;
+        outline: none;
+        color: $violet;
+        cursor: pointer;
+        text-shadow: 0px 1px 10px rgba(150, 150, 150, 1);
+
+        &:hover {
+          background-color: $magenta;
+          color: white;
+        }
+      }
+    }
+
+    //ICONS-----------
+    .icon-container {
+      padding: 25px 25% 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .fab {
+        border: 1px solid white;
+        border-radius: 100px;
+        color: white;
+        cursor: pointer;
+        margin: 50px 5%;
+
+        &:hover {
+          color: $magenta;
+          border-color: $magenta;
+        }
+      }
+
+      .fa-facebook-f {
+        padding: 10px 12.5px;
+      }
+      .fa-twitter {
+        padding: 10px;
+      }
+      .fa-instagram {
+        padding: 10px;
+      }
+    }
+  }
+}
+
+footer {
+  padding: 50px 30px;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  body {
+    main {
+      padding: 50px;
+
+      article {
+        h1 {
+          font-size: calc(36px + 2vw);
+        }
+
+        p {
+          padding: 15px;
+          font-size: 1.1em;
+        }
+        button {
+          height: 55px;
+          width: 70%;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1000px) {
+  body {
+    display: inline-block;
+    height: 100%;
+    width: 100vw;
+
+    main {
+      background-image: url("../images/bg-desktop.svg");
+      background-position: -80px center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      padding: 60px;
+
+      .img-container {
+        padding: 0px 50px 60px;
+        flex: 1;
+        flex-grow: 1.1;
+        flex-shrink: 0.2;
+        .logo {
+          width: 200px;
+          margin-bottom: 100px;
+        }
+      }
+
+      article {
+        flex-grow: 0.9;
+        flex-shrink: 6;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: center;
+        text-align: left;
+
+        h1 {
+          font-size: calc(16px + 1.5vw);
+        }
+        p {
+          font-size: 20px;
+          padding: 0 30px 0 0;
+        }
+        button {
+          width: 180px;
+          height: 55px;
+          font-size: 1.1em;
+        }
+        .icon-container {
+          position: absolute;
+          padding: 0;
+          height: 50px;
+          bottom: 0;
+          right: 35px;
+        }
+      }
+    }
+  }
+
+  .icon-container {
+    position: relative;
+  }
+}
